@@ -9,15 +9,39 @@
 
     <title>Formulario básico HTML5</title>
 </head>
+<h1>Formulario básico HTML5</h1>
 
 <body class="container">
-    <form method="post" action="">
+    <form method="post" action="https://singulars2022.free.beeceptor.com">
 
-        <fieldset>
+        
+            <label for="nombre">Nombre:</label>
+            <input type="text" maxlength="50" placeholder="Almudena" name="nombre" id="nombre" required>
 
-            <label for="nombre">Nombre: </label>
-            <input type="text" required maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
-        </fieldset>
+            <label for="edad">Edad:</label>
+            <input type="number" max="99" min="18" placeholder="25" name="edad" id="edad" required>
+
+            <label for="nombre">DNI:</label>
+            <input type="text" pattern="[0-9]{8}+[A-Za-z]{1}" placeholder="34234223W" name="dni" id="dni" required>
+
+            <label for="ciudad">Ciudad de origen:</label>
+            <input type="text" maxlength="100" placeholder="Barcelona" name="ciudad" id="ciudad" required>
+
+            <label for="transporte">Como vienes a estudiar:</label>
+            <select id="transporte" name="transporte" required>
+                <option value="pie" selected>A pie</option>
+                <option value="tPublico">Transporte público</option>
+                <option value="tPrivado">Trasporte privado</option> 
+            </select>
+
+            <label for="objetivos">Objetivos del curso</label>
+            <textarea name="objetivos" id="objetivos" cols="30" rows="5" maxlength="1024"></textarea>
+
+            <label for="3things1lie">3 cosas sorbe tí. Una de ellas es falsa:</label>
+            <input type="text" name="1thing">
+            <input type="text" name="2thing">
+            <input type="text" name="3thing">
+       
 
         <input type="submit" class="submit" id="submit" value="Enviar" />
 
